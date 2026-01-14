@@ -3,7 +3,7 @@ VERSION=$2
 
 if [ -z "$TYPE" ];
 then
-    echo "Type: liberica, temurin";
+    echo "Type: liberica, temurin, openj9";
     exit 0;
 fi
 
@@ -15,4 +15,8 @@ fi
 
 if [ $TYPE = "temurin" ]; then
     docker buildx build -t happyareabean/pterodactyl-temurin:$VERSION . -f $FOLDER/Dockerfile
+fi
+
+if [ $TYPE = "openj9" ]; then
+    docker buildx build -t happyareabean/pterodactyl-openj9:$VERSION . -f $FOLDER/Dockerfile
 fi
