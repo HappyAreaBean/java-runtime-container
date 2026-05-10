@@ -1,4 +1,4 @@
-FROM bellsoft/liberica-runtime-container:jdk-all-25-cds-glibc
+FROM bellsoft/liberica-runtime-container:jdk-25-cds-glibc
 
 LABEL org.opencontainers.image.source="https://fantasyrealms.net"
 
