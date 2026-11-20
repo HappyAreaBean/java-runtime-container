@@ -1,4 +1,4 @@
-FROM eclipse-temurin:25-jre-alpine-3.23
+FROM --platform=$TARGETOS/$TARGETARCH eclipse-temurin:25-jre-alpine
 
 LABEL org.opencontainers.image.source="https://fantasyrealms.net"
 LABEL org.opencontainers.image.licenses=MIT

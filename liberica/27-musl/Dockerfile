@@ -1,4 +1,4 @@
-FROM bellsoft/liberica-runtime-container:jdk-27-cds-musl
+FROM --platform=$TARGETOS/$TARGETARCH bellsoft/liberica-runtime-container:jdk-27-cds-musl
 
 LABEL org.opencontainers.image.source="https://fantasyrealms.net"
 LABEL org.opencontainers.image.licenses=MIT

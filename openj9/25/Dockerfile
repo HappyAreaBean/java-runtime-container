@@ -1,4 +1,4 @@
-FROM ibm-semeru-runtimes:open-25-jdk-noble
+FROM --platform=$TARGETOS/$TARGETARCH ibm-semeru-runtimes:open-25-jdk-noble
 
 LABEL org.opencontainers.image.source="https://fantasyrealms.net"
 LABEL org.opencontainers.image.licenses=MIT
