@@ -28,18 +28,18 @@ jobs:
             tag: 21-glibc
           - distribution: liberica
             tag: 21-musl
-          # - distribution: liberica
-          #   tag: 25-glibc
-          # - distribution: liberica
-          #   tag: 25-musl
-          # - distribution: liberica
-          #   tag: 27-glibc
-          # - distribution: liberica
-          #   tag: 27-musl
-          # - distribution: openj9
-          #   tag: "25"
-          # - distribution: temurin
-          #   tag: "25"
+          - distribution: liberica
+            tag: 25-glibc
+          - distribution: liberica
+            tag: 25-musl
+          - distribution: liberica
+            tag: 27-glibc
+          - distribution: liberica
+            tag: 27-musl
+          - distribution: openj9
+            tag: "25"
+          - distribution: temurin
+            tag: "25"
     steps:
       - uses: actions/checkout@v7
       - uses: docker/setup-qemu-action@v4
