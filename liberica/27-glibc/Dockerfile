@@ -1,8 +1,9 @@
 FROM bellsoft/liberica-runtime-container:jdk-27-cds-glibc
 
 LABEL org.opencontainers.image.source="https://fantasyrealms.net"
+LABEL org.opencontainers.image.licenses=MIT
 
-LABEL author="happyareabean"
+LABEL author="HappyAreaBean"
 
 RUN apk add --no-cache bash fontconfig ttf-dejavu eudev eudev-dev eudev-libs libstdc++ libcurl
 

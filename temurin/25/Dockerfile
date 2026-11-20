@@ -1,8 +1,9 @@
 FROM eclipse-temurin:25-jre-alpine-3.23
 
 LABEL org.opencontainers.image.source="https://fantasyrealms.net"
+LABEL org.opencontainers.image.licenses=MIT
 
-LABEL author="happyareabean"
+LABEL author="HappyAreaBean"
 
 RUN apk add --no-cache bash fontconfig ttf-dejavu eudev eudev-dev eudev-libs libstdc++
 

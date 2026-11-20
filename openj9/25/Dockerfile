@@ -1,8 +1,9 @@
 FROM ibm-semeru-runtimes:open-25-jdk-noble
 
 LABEL org.opencontainers.image.source="https://fantasyrealms.net"
+LABEL org.opencontainers.image.licenses=MIT
 
-LABEL author="happyareabean"
+LABEL author="HappyAreaBean"
 
 # hadolint ignore=DL3015
 RUN         apt-get update -y \
