@@ -1,4 +1,4 @@
-FROM --platform=$TARGETOS/$TARGETARCH ibm-semeru-runtimes:open-25-jdk-noble
+FROM --platform=$TARGETOS/$TARGETARCH ibm-semeru-runtimes:open-25-jdk
 
 LABEL org.opencontainers.image.source="https://fantasyrealms.net"
 LABEL org.opencontainers.image.licenses=MIT
@@ -30,5 +30,7 @@ WORKDIR /home/container
 
 STOPSIGNAL SIGINT
 
-COPY --chown=root:root --chmod=755 ../entrypoint.sh /entrypoint.sh
-CMD [ "/bin/bash", "/entrypoint.sh" ]
+COPY        --chown=container:container entrypoint.sh /entrypoint.sh
+RUN         chmod +x /entrypoint.sh
+ENTRYPOINT    ["/usr/bin/tini", "-g", "--"]
+CMD         ["/entrypoint.sh"]
